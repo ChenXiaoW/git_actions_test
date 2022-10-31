@@ -1,0 +1,19 @@
+name: GIT_ACTIONS_TEST
+run-name: ${{git.actor}} is testing out GitHub GIT_ACTIONS_TEST
+on: [push]
+jobs:
+  my_first_job:
+    name: My First Job
+    runs-on: ubuntu-18.04
+    steps:
+    - name: First step
+      run: echo 'First step'
+  my_second_job:
+    name: My Second Job
+    runs-on: ubuntu-18.04
+    needs: [my_first_job] 
+    env:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    steps:
+      - name: Second step
+        run: echo 'Second step , $ACCESS_TOKEN'
