@@ -6,8 +6,12 @@ jobs:
     name: My First Job
     runs-on: ubuntu-18.04
     steps:
-    - name: First step
-      run: echo 'First step'
+    - name: one step
+      run: echo 'one step'
+    - name: two step
+      run: echo 'two step'
+    - name: three step
+      run: echo 'three step'
   my_second_job:
     name: My Second Job
     runs-on: ubuntu-18.04
