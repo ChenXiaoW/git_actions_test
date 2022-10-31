@@ -16,4 +16,4 @@ jobs:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
     steps:
       - name: Second step
-        run: echo 'Second step , $ACCESS_TOKEN'
+        run: echo 'Second step , ' $ACCESS_TOKEN
